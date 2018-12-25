@@ -1,1 +1,9 @@
 <h1>First component</h1>
+
+
+<input type="text" [(ngModel)]="inp" placeholder="Enter a number">
+<button (click)= "fetch(inp)">Get Data</button>
+<br/><br/><br/>
+<div>
+    {{data}}
+</div>

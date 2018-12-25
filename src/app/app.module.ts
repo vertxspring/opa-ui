@@ -9,6 +9,8 @@ import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule }   from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,9 @@ import { FooterComponent } from './footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
-    MaterialsModule
+    MaterialsModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

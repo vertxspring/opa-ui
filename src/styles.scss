@@ -18,6 +18,7 @@ $opa-ui-accent: mat-palette($mat-pink, A200, A100, A400);
 // The warn palette is optional (defaults to red).
 $opa-ui-warn: mat-palette($mat-red);
 
+
 // Create the theme object (a Sass map containing all of the palettes).
 $opa-ui-theme: mat-light-theme($opa-ui-primary, $opa-ui-accent, $opa-ui-warn);
 

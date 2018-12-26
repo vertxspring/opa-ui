@@ -21,7 +21,7 @@ export class FakeService {
 
 
   getData(num : number){
-   return this.http.get("https://jsonplaceholder.typicode.com/posts/" + num + "/comments");
+   return this.http.get("https://jsonplaceholder.typicode.com/posts/" + num);
    
   }
   constructor( private http: HttpClient) {

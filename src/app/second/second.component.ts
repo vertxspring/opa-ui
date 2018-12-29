@@ -12,4 +12,16 @@ export class SecondComponent implements OnInit {
   ngOnInit() {
   }
 
+  sendEvent = () => {
+
+
+      (<any>window).ga('send', {
+        hitType: 'event',
+        eventCategory: 'Videos',
+        eventAction: 'play',
+        eventLabel: 'Fall Campaign'
+      });
+
+    
+  }
 }

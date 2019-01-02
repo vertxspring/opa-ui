@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AnalyticsService } from '../analytics.service';
 
 @Component({
   selector: 'app-second',
@@ -7,21 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SecondComponent implements OnInit {
 
-  constructor() { }
+  constructor(private analyticsService : AnalyticsService) { }
 
   ngOnInit() {
   }
 
-  sendEvent = () => {
+   sendEvent(action:String, label:String) {
 
-
-      (<any>window).ga('send', {
-        hitType: 'event',
-        eventCategory: 'Videos',
-        eventAction: 'play',
-        eventLabel: 'Fall Campaign'
-      });
-
+this.analyticsService.sendEvent("sec-comp",action,label);
     
   }
 }

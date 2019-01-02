@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { AnalyticsService } from './analytics.service';
 
 @Component({
   selector: 'app-root',
@@ -10,13 +11,7 @@ export class AppComponent {
   title = 'opa-ui';
 
 
-  constructor(private router: Router) {
-    this.router.events.subscribe(event => {
-     if (event instanceof NavigationEnd) {
-       console.log(event.urlAfterRedirects);
-       (<any>window).ga('set', 'page', event.urlAfterRedirects);
-       (<any>window).ga('send', 'pageview');
-     }
-   });
+  constructor(private analytics: AnalyticsService) {
+  analytics.init();
  }
 }

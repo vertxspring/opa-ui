@@ -27,7 +27,6 @@ export class FakeService {
   }
   constructor( private http: HttpClient) {
 
-    console.log("I am in constructor");
-
+    
    }
 }

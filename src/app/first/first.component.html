@@ -1,8 +1,11 @@
 <h1>First component</h1>
 
-
-<input type="text" [(ngModel)]="inp" placeholder="Enter a number">
-<button (click)= "fetch(inp)">Get Data</button>
+<mat-form-field>
+<input matInput type="text" [(ngModel)]="inp" placeholder="Enter a number">
+</mat-form-field>
+<span class="padding">
+<button mat-raised-button color="primary" (click)= "fetch(inp)">Get Data</button>
+</span>
 <br/><br/><br/>
 <div>
     {{data}}

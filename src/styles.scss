@@ -31,3 +31,7 @@ $opa-ui-theme: mat-light-theme($opa-ui-primary, $opa-ui-accent, $opa-ui-warn);
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.padding{
+    padding: 10px;
+}
